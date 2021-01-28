@@ -19,7 +19,28 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<style>
+.container div a img {
+    width: 18%;
+}
+
+#header{
+    height: 100px;
+}
+
+@media (max-width: 1200px){
+    .container div a img {
+    width: 18%;
+}
+
+.container .row .col-4 span {
+    display:grid
+}
+
+}
+</style>
+
+<body class="h-100">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
@@ -77,9 +98,35 @@
             </div>
         </nav>
 
-        <main class="py-4 bg-dark">
+        <main class="py-4 bg-dark h-100">
             @yield('content')
         </main>
+
+        <footer class="bg-dark text-light" id="header">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-4">
+                        Sólo un pequeño blog sobre mí
+                    </div>
+                    <div class="col-4 justify-content-center">
+                    
+                    <div class="">
+                        <span>Redes sociales</span>
+                        <a class="mx-2" href="https://www.instagram.com/gabriel._federico" target="_blank">
+                            <img src="https://www.pngkit.com/png/full/488-4883158_subscribe-to-our-mailing-list-icono-de-instagram.png" alt="instagram" />
+                        </a>
+                        <a class="mx-2" href="https://twitter.com/gabriel_hrld" target="_blank">
+                            <img src="https://www.aranleon.com/wp-content/uploads/2017/01/twitter.png" alt="instagram" />
+                        </a>
+                        <a class="mx-2" href="https://github.com/HeraldHRLD" target="_blank">
+                            <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png" alt="instagram" />
+                        </a>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="7JhjxWMq"></script>

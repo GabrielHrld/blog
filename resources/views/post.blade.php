@@ -29,7 +29,10 @@
                         {{$post->created_at->format('d M Y')}}
                     </p>
                 </div>
-            <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
             </div>
         </div>
         
